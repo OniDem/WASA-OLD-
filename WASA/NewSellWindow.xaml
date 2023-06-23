@@ -1,0 +1,39 @@
+﻿<Window x:Class="WASA.NewSell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WASA"
+        mc:Ignorable="d"
+        Title="Смена" WindowStartupLocation="CenterScreen" Height="450" Width="800" Activated="Window_Activated">
+    <Grid Background="LightGray" >
+        <Label x:Name="UserUI_Label_Date" HorizontalAlignment="Right" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="70" Height="25" HorizontalContentAlignment="Right" Margin="2 2 142 2"></Label>
+        <Label x:Name="UserUI_Label_Day_Of_Week" HorizontalAlignment="Right" VerticalAlignment="Top" Width="85" Height="25" HorizontalContentAlignment="Right" Margin="2 2 57 2"></Label>
+        <Label x:Name="UserUI_Label_RealTime" HorizontalAlignment="Right" VerticalAlignment="Top" Width="55" Height="25" HorizontalContentAlignment="Right" Margin="2 2 2 2"></Label>
+        <DataGrid x:Name="dgsell" Margin="5 29 5 60" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Время" Binding="{Binding Path=Time}" Width="45"/>
+                <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding Path=Position}"/>
+                <DataGridTextColumn Header="Цена" Width="40" Binding="{Binding Path=Price}"/>
+                <DataGridTextColumn Header="Скидка" Width="50" Binding="{Binding Path=Discount}"/>
+                <DataGridCheckBoxColumn Header="Касса" Width="40" Binding="{Binding Path=Cash}"/>
+                <DataGridCheckBoxColumn Header="Экв." Width="40" Binding="{Binding Path=Acquiring}"/>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+        <StackPanel Orientation="Horizontal"  Margin="10">
+            <Button Click="Back_Click" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="90" Height="30" Margin="10" Background="LightSalmon">Назад</Button>
+            <Button Click="CloseSell_Click" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="90" Height="30" Background="#99D23232" Margin="10">Закрыть смену</Button>
+            <Button Click="Update_Click" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="90" Height="30" Background="Aquamarine" Margin="10">Обновить</Button>
+        </StackPanel>
+        <TextBlock Text="ЗП" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="10" TextAlignment="Center" Margin="30 30 180 5" Height="50" Width="50"></TextBlock>
+        <TextBlock Text="Наличка" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="10" TextAlignment="Center" Margin="30 30 130 5" Height="50" Width="50"></TextBlock>
+        <TextBlock Text="Эквайринг" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="10" TextAlignment="Center" Margin="30 30 80 5" Height="50" Width="50"></TextBlock>
+        <TextBlock Text="Всего" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="10" TextAlignment="Center" Margin="30 30 30 5"  Height="50" Width="50"></TextBlock>
+        <TextBlock x:Name="tb_Payments" VerticalAlignment="Bottom" HorizontalAlignment="Right" TextAlignment="Center" Margin="30 30 180 5" Height="30" Width="50"></TextBlock>
+        <TextBlock x:Name="tb_Cash_Accouting" VerticalAlignment="Bottom" HorizontalAlignment="Right" TextAlignment="Center" Margin="30 30 130 5" Height="30" Width="50"></TextBlock>
+        <TextBlock x:Name="tb_Acquiring_Accouting" VerticalAlignment="Bottom" HorizontalAlignment="Right" TextAlignment="Center" Margin="30 30 80 5" Height="30" Width="50"></TextBlock>
+        <TextBlock x:Name="tb_All_Accouting" VerticalAlignment="Bottom" HorizontalAlignment="Right" TextAlignment="Center" Margin="30 30 30 5" Height="30" Width="50"></TextBlock>
+    </Grid>
+</Window>        
+    

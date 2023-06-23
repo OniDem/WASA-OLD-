@@ -1,0 +1,56 @@
+﻿<Window x:Class="WASA.WH_MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WASA"
+        mc:Ignorable="d"
+        Title="WASA: Товар" WindowStartupLocation="CenterScreen" Height="450" Width="800">
+    <Grid>
+        <Label VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 10 10 10">
+            <Button Click="Back_Click" Height="50" Width="100" Background="LightSalmon">Назад</Button>
+        </Label>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20 20 20 20">
+            <Button Click="WH_Case_Click" Height="30" Width="110" Margin="15">Чехлы</Button>
+            <Button Click="WH_Headphones_Click" Height="30" Width="135" Margin="15">Наушники</Button>
+            <Button Click="WH_Storage_Click" Height="30" Width="145" Margin="15">Накопители</Button>
+            <Button Click="WH_Charge_Click" Height="30" Width="135" Margin="15">Зарядные устройства</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20 70 20 20">
+            <Button Click="WH_Adapter_Click" Height="30" Width="110" Margin="15">Переходники</Button>
+            <Button Click="WH_Audio_Click" Height="30" Width="135" Margin="15">Аудио</Button>
+            <Button Click="WH_Accesories_Click" Height="30" Width="145" Margin="15">Аксессуары</Button>
+            <Button Click="WH_PCAccesories_Click" Height="30" Width="135" Margin="15">Для ПК</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20 120 20 20">
+            <Button Click="Cable_Click" Height="30" Width="110" Margin="15">Провода</Button>
+            <Button x:Name="CarHolder" Click="CarHolder_Click" Height="30" Width="135" Margin="15">Держатели</Button>
+            <Button x:Name="Battery" Click="Battery_Click" Height="30" Width="145" Margin="15">АКБ</Button>
+            <Button Height="30" Width="135" Margin="15" IsEnabled="False">In Progress</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20 170 20 20">
+            <Button Height="30" Width="110" Margin="15" IsEnabled="False">In Progress</Button>
+            <Button Height="30" Width="135" Margin="15" IsEnabled="False">In Progress</Button>
+            <Button Height="30" Width="145" Margin="15" IsEnabled="False">In Progress</Button>
+            <Button Height="30" Width="135" Margin="15" IsEnabled="False">In Progress</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20 220 20 20">
+            <Button Height="30" Width="110" Margin="15" IsEnabled="False">In Progress</Button>
+            <Button Height="30" Width="135" Margin="15" IsEnabled="False">In Progress</Button>
+            <Button Height="30" Width="145" Margin="15" IsEnabled="False">In Progress</Button>
+            <Button Height="30" Width="135" Margin="15" IsEnabled="False">In Progress</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20 270 20 20">
+            <Button Height="30" Width="110" Margin="15" IsEnabled="False">In Progress</Button>
+            <Button Height="30" Width="135" Margin="15" IsEnabled="False">In Progress</Button>
+            <Button Height="30" Width="145" Margin="15" IsEnabled="False">In Progress</Button>
+            <Button Height="30" Width="135" Margin="15" IsEnabled="False">In Progress</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20 320 20 20">
+            <Button Height="30" Width="110" Margin="15" IsEnabled="False">In Progress</Button>
+            <Button Height="30" Width="135" Margin="15" IsEnabled="False">In Progress</Button>
+            <Button Height="30" Width="145" Margin="15" IsEnabled="False">In Progress</Button>
+            <Button Height="30" Width="135" Margin="15" IsEnabled="False">In Progress</Button>
+        </StackPanel>
+    </Grid>
+</Window>

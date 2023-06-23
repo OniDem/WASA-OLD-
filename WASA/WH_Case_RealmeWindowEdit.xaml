@@ -1,0 +1,43 @@
+﻿<Window x:Class="WASA.WH_Case_RealmeWindowEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WASA"
+        mc:Ignorable="d"
+        Title="Чехлы Realme: Изменение" Height="450" WindowStartupLocation="CenterScreen" Width="800" Activated="Window_Activated" Loaded="Window_Loaded">
+    <Grid>
+        <Label x:Name="UserUI_Label_Date" HorizontalAlignment="Right" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="70" Height="25" HorizontalContentAlignment="Right" Margin="2 2 142 2"></Label>
+        <Label x:Name="UserUI_Label_Day_Of_Week" HorizontalAlignment="Right" VerticalAlignment="Top" Width="85" Height="25" HorizontalContentAlignment="Right" Margin="2 2 57 2"></Label>
+        <Label x:Name="UserUI_Label_RealTime" HorizontalAlignment="Right" VerticalAlignment="Top" Width="55" Height="25" HorizontalContentAlignment="Right" Margin="2 2 2 2"></Label>
+        <StackPanel Orientation="Horizontal"  Margin="10 30 25 10" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Button x:Name="Search" Click="Search_Click"  HorizontalAlignment="Left" Width="90" Height="30" Margin="5">Найти</Button>
+            <Button x:Name="Edit" Click="Edit_Click" HorizontalAlignment="Right" Width="90" Height="30">Изменить</Button>
+        </StackPanel>
+        <DataGrid x:Name="dgWH_Manipulate" HorizontalAlignment="Left" VerticalAlignment="Top" AutoGenerateColumns="False" Margin="5 5 230 5" Height="60" CanUserSortColumns="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Артикул" Binding="{Binding Path=Vendor_Code}" Width="60"/>
+                <DataGridTextColumn Header="Модель" Binding="{Binding Path=Model}" Width="*"/>
+                <DataGridTextColumn Header="Серия" Binding="{Binding Path=Series}" Width="*"/>
+                <DataGridTextColumn Header="Производитель" Binding="{Binding Path=Manufacturer}" Width="100"/>
+                <DataGridTextColumn Header="Розница" Binding="{Binding Path=Retail}" Width="55"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Path=Count}" Width="75"/>
+                <DataGridTextColumn Header="Цвет" Binding="{Binding Path=Color}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="dgWH_Case" AutoGenerateColumns="False" Margin="5 70 5 60" CanUserSortColumns="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Артикул" Binding="{Binding Path=Vendor_Code}" Width="60"/>
+                <DataGridTextColumn Header="Модель" Binding="{Binding Path=Model}" Width="*"/>
+                <DataGridTextColumn Header="Серия" Binding="{Binding Path=Series}" Width="*"/>
+                <DataGridTextColumn Header="Производитель" Binding="{Binding Path=Manufacturer}" Width="100"/>
+                <DataGridTextColumn Header="Розница" Binding="{Binding Path=Retail}" Width="55"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Path=Count}" Width="75"/>
+                <DataGridTextColumn Header="Цвет" Binding="{Binding Path=Color}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal"  Margin="10">
+            <Button Click="Back_Click"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="90" Height="30" Background="LightSalmon">Назад</Button>
+        </StackPanel>
+    </Grid>
+</Window>
